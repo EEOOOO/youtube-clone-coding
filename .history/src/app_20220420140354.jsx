@@ -1,10 +1,8 @@
 import React from 'react';
 import './App.css';
-import Nav from './components/nav/nav';
+
 function App() {
-  return <>
-  <Nav/>
-  </>
+  return <h1>Hello React Wolrd :) </h1>;
 }
 
 export default App;

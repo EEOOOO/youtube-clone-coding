@@ -1,0 +1,9 @@
+.search_header {
+  background-color: black;
+  display: flex;
+  height: 4rem;
+  color: white;
+}
+.logo {
+  width: 3rem;
+}

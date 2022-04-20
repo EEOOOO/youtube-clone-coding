@@ -1,0 +1,6 @@
+.search_header {
+  background-color: black;
+  display: flex;
+  height: 4rem;
+  color: white;
+}
