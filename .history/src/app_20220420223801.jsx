@@ -5,6 +5,7 @@ import VideoList from './components/video_list/video_list';
 
 function App() {
   const [videos, setVideos] = useState([]);
+  const [click, setClicked] = useState([])
 
   const onSearch = keyword =>{
     const requestOptions = {
@@ -12,9 +13,9 @@ function App() {
       redirect: 'follow'
     };
     
-    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=26&q=${keyword}&type=video&key=AIzaSyA_iQsAW71LykNMoLKID5oU_-gdpc36eqE`, requestOptions)
+    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${keyword}&type=video&key=AIzaSyA_iQsAW71LykNMoLKID5oU_-gdpc36eqE`, requestOptions)
       .then(response => response.json())
-      .then(result => setVideos(result.items))
+      .then(result => console.log(result))
       .catch(error => console.log('error', error));
   }
   useEffect(()=>{
@@ -23,7 +24,7 @@ function App() {
       redirect: 'follow'
     };
     
-    fetch("https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=26&key=AIzaSyA_iQsAW71LykNMoLKID5oU_-gdpc36eqE", requestOptions)
+    fetch("https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyA_iQsAW71LykNMoLKID5oU_-gdpc36eqE", requestOptions)
       .then(response => response.json())
       .then(result => setVideos(result.items))
       .catch(error => console.log('error', error));

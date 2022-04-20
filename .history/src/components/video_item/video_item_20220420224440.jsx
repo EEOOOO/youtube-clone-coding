@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './video_item.module.css'
 const VideoItem = (props) => {
     const decodeHTML = text => {
-        const txt = document.createElement("textarea");
+        const txt = dosument.createElement("textarea");
         txt.innerHTML = text;
         return txt.value
     }

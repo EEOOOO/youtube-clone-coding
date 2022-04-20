@@ -5,15 +5,13 @@ const Nav = (props) => {
     const inputRef = useRef();
     const handleSearch = () => {
         const value = inputRef.current.value;
-        props.onSearch(value);
+        console.log(value);
     }
-    const onKeyPress = event => {
-        if (event.key === "Enter"){
-            handleSearch();
-        }
+    const onKeyPress = () => {
+        handleSearch();
     }
     const onClick = () => {
-        handleSearch();
+        console.log('onClick')
     }
     return  <header className={styles.search_header}>
                 <img className={styles.logo} src="/images/logo.png" />

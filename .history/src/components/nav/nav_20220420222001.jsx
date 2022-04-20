@@ -1,25 +1,22 @@
-import React,{useRef} from 'react';
+import React from 'react';
 import styles from './nav.module.css';
 
 const Nav = (props) => {
     const inputRef = useRef();
     const handleSearch = () => {
-        const value = inputRef.current.value;
-        props.onSearch(value);
+
     }
-    const onKeyPress = event => {
-        if (event.key === "Enter"){
-            handleSearch();
-        }
+    const onKeyPress = () => {
+        console.log('onKeyPress')
     }
     const onClick = () => {
-        handleSearch();
+        console.log('onClick')
     }
     return  <header className={styles.search_header}>
                 <img className={styles.logo} src="/images/logo.png" />
                 <h1 className={styles.title}>Youtube</h1>
                 <input 
-                ref = {inputRef}
+                ref = inputRet
                 className={styles.search_input} 
                 type="search" 
                 placeholder="Type here..." 
