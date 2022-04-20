@@ -8,8 +8,9 @@ function App(props) {
 
   const onSearch = keyword =>{
     props.youtube.search(keyword)
+    .then(result => result.items.map(item =>({...item, id: item.id.videoId}))
     .then(result => setVideos(result.items))
-    .catch(error => console.log('error', error));   
+    .catch(error => console.log('error', error))   
   }
   useEffect(()=>{
     props.youtube.mostPopular()

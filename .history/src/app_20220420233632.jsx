@@ -7,14 +7,11 @@ function App(props) {
   const [videos, setVideos] = useState([]);
 
   const onSearch = keyword =>{
-    props.youtube.search(keyword)
-    .then(result => setVideos(result.items))
-    .catch(error => console.log('error', error));   
+    
+    
   }
   useEffect(()=>{
-    props.youtube.mostPopular()
-    .then(result => setVideos(result.items))
-      .catch(error => console.log('error', error));
+
   },[]);
     
 

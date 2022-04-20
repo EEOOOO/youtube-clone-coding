@@ -3,7 +3,7 @@ import './App.css';
 import Nav from './components/nav/nav';
 import VideoList from './components/video_list/video_list';
 
-function App(props) {
+function App({props}) {
   const [videos, setVideos] = useState([]);
 
   const onSearch = keyword =>{
