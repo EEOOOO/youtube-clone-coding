@@ -7,6 +7,7 @@ function App() {
   const [videos, setVideos] = useState([]);
 
   useEffect(()=>{
+    console.log('videos');
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'
@@ -14,14 +15,12 @@ function App() {
     
     fetch("https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyA_iQsAW71LykNMoLKID5oU_-gdpc36eqE", requestOptions)
       .then(response => response.json())
-      .then(result => setVideos(result.items))
+      .then(result => setVideos(result))
       .catch(error => console.log('error', error));
   }, []);
 
-  return <>
-  <Nav />
-  <VideoList videos={videos}/>
-  </>
+  console.log({videos})
+  return <h1>{videos}</h1>/*<VideoList videos={videos}/>*/
 }
 
 export default App;

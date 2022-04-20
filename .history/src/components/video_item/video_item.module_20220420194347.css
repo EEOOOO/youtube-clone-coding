@@ -1,0 +1,27 @@
+.video_item {
+  list-style: none;
+  display: flex;
+  width: 49%;
+  cursor: pointer;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid lightgray;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  trasnsition: transform 250ms ease-in;
+}
+.video_item:hover {
+  transform: scale(1.03);
+}
+.video_thumbnail {
+  width: 30%;
+}
+.video_description {
+  display: flex;
+  flex-direction: column;
+}
+.video_title {
+  font-size: 1rem;
+  font-weight: 700;
+}

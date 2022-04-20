@@ -1,0 +1,17 @@
+.video_item {
+  list-style: none;
+  display: flex;
+  padding: 1rem;
+  width: 50%;
+  cursor: pointer;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid lightgray;
+}
+.video_thumbnail {
+  width: 30%;
+}
+.video_description {
+  display: flex;
+  felx-direction: column;
+}

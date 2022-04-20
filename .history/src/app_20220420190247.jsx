@@ -7,6 +7,7 @@ function App() {
   const [videos, setVideos] = useState([]);
 
   useEffect(()=>{
+    console.log('videos');
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'
@@ -18,10 +19,8 @@ function App() {
       .catch(error => console.log('error', error));
   }, []);
 
-  return <>
-  <Nav />
-  <VideoList videos={videos}/>
-  </>
+  console.log({videos})
+  return <VideoList videos={videos}/>
 }
 
 export default App;

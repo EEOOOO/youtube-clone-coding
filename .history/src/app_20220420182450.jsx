@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Nav from './components/nav/nav';
+import Card from './components/card/card';
 import VideoList from './components/video_list/video_list';
 
 function App() {
@@ -13,15 +14,12 @@ function App() {
     };
     
     fetch("https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyA_iQsAW71LykNMoLKID5oU_-gdpc36eqE", requestOptions)
-      .then(response => response.json())
+      .then(response => response.text())
       .then(result => setVideos(result.items))
       .catch(error => console.log('error', error));
   }, []);
 
-  return <>
-  <Nav />
-  <VideoList videos={videos}/>
-  </>
+  return <VideoList items={videos}/>
 }
 
 export default App;

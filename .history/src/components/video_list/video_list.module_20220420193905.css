@@ -1,0 +1,7 @@
+.video_list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto 3rem;
+}

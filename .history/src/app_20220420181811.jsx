@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './App.css';
 import Nav from './components/nav/nav';
-import VideoList from './components/video_list/video_list';
+import Card from './components/card/card';
+import { useEffect, useState } from 'react/cjs/react.production.min';
 
 function App() {
   const [videos, setVideos] = useState([]);
@@ -13,15 +14,12 @@ function App() {
     };
     
     fetch("https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyA_iQsAW71LykNMoLKID5oU_-gdpc36eqE", requestOptions)
-      .then(response => response.json())
-      .then(result => setVideos(result.items))
+      .then(response => response.text())
+      .then(result => console.log(result))
       .catch(error => console.log('error', error));
   }, []);
 
-  return <>
-  <Nav />
-  <VideoList videos={videos}/>
-  </>
+  return <h1>hello</h1>
 }
 
 export default App;

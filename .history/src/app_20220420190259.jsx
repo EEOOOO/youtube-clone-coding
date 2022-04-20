@@ -18,10 +18,7 @@ function App() {
       .catch(error => console.log('error', error));
   }, []);
 
-  return <>
-  <Nav />
-  <VideoList videos={videos}/>
-  </>
+  return <VideoList videos={videos}/>
 }
 
 export default App;
