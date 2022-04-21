@@ -1,0 +1,14 @@
+.detail_container {
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+}
+.video_player {
+  width: 100%;
+}
+h1,
+h3 {
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid lightgrey;
+}

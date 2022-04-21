@@ -8,7 +8,6 @@ function App(props) {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   const onSearch = keyword =>{
-    setSelectedVideo(null);
     props.youtube.search(keyword)
     .then(result => setVideos(result.items))
     .catch(error => console.log('error', error));   

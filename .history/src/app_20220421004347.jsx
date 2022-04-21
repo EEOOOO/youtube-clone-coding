@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import './App.css';
 import Nav from './components/nav/nav';
 import VideoList from './components/video_list/video_list';
 import VideoDetail from './components/video_detail/video_detail';
-import styles from './app.module.css'
+
 function App(props) {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   const onSearch = keyword =>{
-    setSelectedVideo(null);
     props.youtube.search(keyword)
     .then(result => setVideos(result.items))
     .catch(error => console.log('error', error));   
@@ -19,21 +19,13 @@ function App(props) {
       .catch(error => console.log('error', error));
   },[]);
   const handleVideoClick = video => {
-    const selected = video
-    setSelectedVideo(selected);
-    console.log(selected);
+    console.log(video);
   }
-  return <div className={styles.app}>
-    <Nav onSearch={onSearch}/>
-    <section className={styles.content}>
-    {selectedVideo && <div className={styles.detail}>
-         <VideoDetail video={selectedVideo}/>
-      </div>}
-    <div className={styles.list}>
-      <VideoList videos={videos} onVideoClick={handleVideoClick} display={selectedVideo? 'list':'grid'}/>
-    </div>
-    </section>
-  </div>
+  return <>
+  <Nav onSearch={onSearch}/>
+  {selectedVideo && <VideoDetail/>
+  <VideoList videos={videos} onVideoClick={handleVideoClick}/>
+  </>
 }
 
 export default App;

@@ -4,7 +4,7 @@ import styles from './video_list.module.css'
 const VideoList = (props) => (
             <ul className={styles.video_list}>
                 {props.videos.map(video => (
-                    <VideoItem key={video.id} video={video} onVideoClick={props.onVideoClick} display={props.display}/>
+                    <VideoItem key={video.id} video={video} onVideoClick={onVideoClick}}/>
                 ))}
             </ul>
     );

@@ -1,0 +1,9 @@
+.detail_container {
+  background-color: lightpink;
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+}
+.video_player {
+  width: 100%;
+}

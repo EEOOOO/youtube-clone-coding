@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import React from 'react';
+import { useRef } from 'react/cjs/react.production.min';
 import styles from './video_item.module.css'
 const VideoItem = (props) => {
     const decodeHTML = text => {
@@ -6,11 +7,11 @@ const VideoItem = (props) => {
         txt.innerHTML = text;
         return txt.value
     }
-    const onClick = () => {
-        props.onVideoClick(props.video);
+    const onClick = event => {
+        props.onVideoCLick(event.target);
     }
-    const displayType = props.display == 'grid'? styles.grid : styles.list;
-    return <li className={`${styles.video_item} ${displayType}`} onClick={onClick}>
+    
+    return <li className={styles.video_item} onClick={onClick}>
         <img className={styles.video_thumbnail} src={props.video.snippet.thumbnails.medium.url} />
         <div className="video_description">
             <p className={styles.video_title}>{decodeHTML(props.video.snippet.title)}</p>

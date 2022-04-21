@@ -10,7 +10,7 @@ const VideoItem = (props) => {
         props.onVideoClick(props.video);
     }
     const displayType = props.display == 'grid'? styles.grid : styles.list;
-    return <li className={`${styles.video_item} ${displayType}`} onClick={onClick}>
+    return <li className={`${styles.video_item} ${styles.displayType}`} onClick={onClick}>
         <img className={styles.video_thumbnail} src={props.video.snippet.thumbnails.medium.url} />
         <div className="video_description">
             <p className={styles.video_title}>{decodeHTML(props.video.snippet.title)}</p>

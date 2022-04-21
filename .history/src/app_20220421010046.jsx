@@ -8,7 +8,6 @@ function App(props) {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   const onSearch = keyword =>{
-    setSelectedVideo(null);
     props.youtube.search(keyword)
     .then(result => setVideos(result.items))
     .catch(error => console.log('error', error));   
@@ -23,17 +22,11 @@ function App(props) {
     setSelectedVideo(selected);
     console.log(selected);
   }
-  return <div className={styles.app}>
-    <Nav onSearch={onSearch}/>
-    <section className={styles.content}>
-    {selectedVideo && <div className={styles.detail}>
-         <VideoDetail video={selectedVideo}/>
-      </div>}
-    <div className={styles.list}>
-      <VideoList videos={videos} onVideoClick={handleVideoClick} display={selectedVideo? 'list':'grid'}/>
-    </div>
-    </section>
-  </div>
+  return <>
+  <Nav onSearch={onSearch}/>
+  {selectedVideo && <VideoDetail video={selectedVideo}/>}
+  <VideoList videos={videos} onVideoClick={handleVideoClick}/>
+  </>
 }
 
 export default App;
