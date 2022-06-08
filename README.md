@@ -7,5 +7,5 @@ make youtube web page using React
 
 
 
-<img src="https://user-images.githubusercontent.com/45444757/172579711-4a5c8fb2-d935-4ab1-9ccf-6ae3d95365bd.png" width='70%' height='70%'>
+<img src="https://user-images.githubusercontent.com/45444757/172579711-4a5c8fb2-d935-4ab1-9ccf-6ae3d95365bd.png" width='30%' height='30%'>
 
