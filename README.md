@@ -8,6 +8,10 @@ make youtube web page using React
 🚩 HTML, CSS, JS에 익숙해지고, React를 처음 사용해보며 학습하기 위해 진행했던 '유튜브 클론코딩'프로젝트입니다.
 
 
+</br>
+</br>
+
+
 ### 메인 페이지
 
 <img src="https://user-images.githubusercontent.com/45444757/172593033-3c4705de-54f0-4279-8061-f11f8fd5d3bf.png" width='70%' height='70%'>
