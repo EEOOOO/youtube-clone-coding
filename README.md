@@ -5,7 +5,7 @@ make youtube web page using React
 </br>
 
 
-🚩 HTML, CSS, JS에 익숙해지고, React를 처음 사용해보며 학습하기 위해 진행했던 '유튜브 클론코딩'프로젝트입니다.
+### 🚩 HTML, CSS, JS에 익숙해지고, React를 처음 사용해보며 학습하기 위해 진행했던 '유튜브 클론코딩'프로젝트입니다.
 
 
 </br>
@@ -53,7 +53,7 @@ make youtube web page using React
 
 
 
-📝 메모
+### 📝 메모
 
   - Postman을 이용해 API활용을 쉽게 하는 것을 연습해보았습니다.
 
