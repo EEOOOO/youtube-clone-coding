@@ -1,6 +1,10 @@
 # youtube-clone-coding
 make youtube web page using React
 
+</br>
+</br>
+
+
 🚩 HTML, CSS, JS에 익숙해지고, React를 처음 사용해보며 학습하기 위해 진행했던 '유튜브 클론코딩'프로젝트입니다.
 
 
@@ -15,6 +19,11 @@ make youtube web page using React
   - 각 Video는 클릭 시 동영상 재생 + 동영상 정보확인이 가능합니다. : Youtube API를 활용해 구현했습니다. 
   
   - 검색창을 이용해 원하는 영상을 검색할 수 있습니다.  : Youtube Search API를 활용해 구현했습니다. 검색 값을 받아와 서버와 통신합니다.
+
+
+
+</br>
+</br>
 
 
 
@@ -33,6 +42,10 @@ make youtube web page using React
 - 구현
 
   - 메인 페이지에서 쓰인 Video List를 오른쪽에 배치하도록 했습니다.
+
+
+</br>
+</br>
 
 
 
